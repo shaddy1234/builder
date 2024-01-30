@@ -1,6 +1,24 @@
-import React from 'react'
+import React, {useState} from 'react'
+
 
 function Login() {
+
+    const [formData, setFormData] = useState({
+        firstName:'',
+        lastName:'',
+        email:'',
+        password:'',
+        confirmPassword:''
+      })
+
+    function handleChange(e) {
+        setFormData(prevFormData => ({
+          ...prevFormData,
+          [e.target.name]: e.target.value
+        }));
+        console.log(formData)
+      }
+      
     return (
         <div className='main-1'>
             <form className="form" >
@@ -8,55 +26,48 @@ function Login() {
                     type="text"
                     placeholder="FirstName"
                     className="form--input"
-                    name="FirstName"
-                    value={FormData.firstName}
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleChange}
                 />
                 <input
                     type="text"
                     placeholder="LastName"
                     className="form--input"
-                    name="FirstName"
-                    value={FormData.lastName}
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleChange}
                 />
                 <input
                     type="email"
                     placeholder="Email address"
                     className="form--input"
-                    name="FirstName"
-                    value={FormData.email}
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                 />
                 <input
                     type="password"
                     placeholder="Password"
                     className="form--input"
-                    name="FirstName"
-                    value={FormData.password}
+                    name="password"
+                    value={formData.password}
+                    onChange={handleChange}
                 />
                 <input
                     type="password"
                     placeholder="Confirm password"
                     className="form--input"
                     name="confirmPassword"
-                    value={FormData.confirmPassword}
+                    value={formData.confirmPassword}
+                    onChange={handleChange}
                 />
-
-                {/* <div className="form--marketing">
-                    <input
-                        id="okayToEmail"
-                        type="checkbox"
-
-                    />
-                    <label htmlFor="okayToEmail">I am sure am Signing Up</label>
-                </div> */}
                 <button
                     className="form--submit"
                 >
                     Sign up
                 </button>
             </form>
-            <div>
-
-            </div>
         </div>
     )
 }
