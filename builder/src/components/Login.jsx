@@ -2,7 +2,7 @@ import React from 'react'
 
 function Login() {
     return (
-        <div>
+        <div className='main-1'>
             <form className="form" >
                 <input
                     type="email"
@@ -26,7 +26,7 @@ function Login() {
                         type="checkbox"
 
                     />
-                    {/* <label htmlFor="okayToEmail">I want to join the newsletter</label> */}
+                    <label htmlFor="okayToEmail">I am sure am Signing Up</label>
                 </div>
                 <button
                     className="form--submit"
