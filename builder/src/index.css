@@ -8,6 +8,10 @@ body {
   height: 100vh;
   font-family: 'Inter', sans-serif;
 }
+.main-1 {
+  max-width: 500px;
+  padding: 50px;
+}
 
 .form-container {
   height: 100vh;
