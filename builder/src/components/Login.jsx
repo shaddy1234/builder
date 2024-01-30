@@ -1,26 +1,26 @@
 import React, {useState} from 'react'
 
 
-function Login() {
+function Login({formData, handleChange, handleSubmit}) {
 
-    const [formData, setFormData] = useState({
-        firstName:'',
-        lastName:'',
-        email:'',
-        password:'',
-        confirmPassword:''
-      })
+    // const [formData, setFormData] = useState({
+    //     firstName:'',
+    //     lastName:'',
+    //     email:'',
+    //     password:'',
+    //     confirmPassword:''
+    //   })
 
-    function handleChange(e) {
-        setFormData(prevFormData => ({
-          ...prevFormData,
-          [e.target.name]: e.target.value
-        }));
-        console.log(formData)
-      }
-      function handleSubmit(e) {
-        e.preventDefault()
-      }
+    // function handleChange(e) {
+    //     setFormData(prevFormData => ({
+    //       ...prevFormData,
+    //       [e.target.name]: e.target.value
+    //     }));
+    //     console.log(formData)
+    //   }
+    //   function handleSubmit(e) {
+    //     e.preventDefault()
+    //   }
     return (
         <div className='main-1'>
             <form className="form" onSubmit={handleSubmit}>
