@@ -5,7 +5,13 @@ import './App.css'
 import Login from './components/Login'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [formData, setFormData] = useState({
+    firstName:'',
+    lastName:'',
+    email:'',
+    password:'',
+    confirmPassword:''
+  })
 
   return (
     <>
