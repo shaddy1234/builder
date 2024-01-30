@@ -8,7 +8,11 @@ body {
   height: 100vh;
   font-family: 'Inter', sans-serif;
 }
-.main-1 {
+.two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.main-1, .main-2 {
   max-width: 500px;
   padding: 50px;
 }
