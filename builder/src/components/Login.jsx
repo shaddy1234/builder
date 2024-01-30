@@ -18,10 +18,12 @@ function Login() {
         }));
         console.log(formData)
       }
-      
+      function handleSubmit(e) {
+        e.preventDefault()
+      }
     return (
         <div className='main-1'>
-            <form className="form" >
+            <form className="form" onSubmit={handleSubmit}>
                 <input
                     type="text"
                     placeholder="FirstName"
